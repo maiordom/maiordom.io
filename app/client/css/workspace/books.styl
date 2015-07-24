@@ -1,0 +1,236 @@
+/* =============================================== *
+ *                      Books                      *
+ * =============================================== */
+
+.books {
+    margin-left: 10px;
+    width: 190px;
+    position: relative;
+    top: 4px;
+
+    span {
+        float: left;
+        position: relative;
+
+        /* Orange */
+        &:nth-child(1), &:nth-child(12),
+        &:nth-child(4), &:nth-child(6) {
+            width: 15px;
+            height: 61px;
+            background-color: #eb594a;
+        }
+        
+        &:nth-child(4) {
+            width: 8px;
+            height: 84px;
+        }
+
+        /* Yellow */
+        &:nth-child(3), &:nth-child(7),
+        &:nth-child(9) {
+            width: 8px;
+            height: 69px;
+            background-color: #f5b400;
+        }
+
+        &:nth-child(9), &:nth-child(6),
+        &:nth-child(5), &:nth-child(10) {
+            width: 16px;
+            height: 92px;
+        }
+
+        /* White */
+        &:nth-child(8), &:nth-child(11) {
+            width: 23px;
+            height: 77px;
+            background-color: #fff;
+        }
+
+        /* Blue */
+        &:nth-child(2), &:nth-child(5),
+        &:nth-child(10) {
+            background-color: #0e3757;
+        }
+        &:nth-child(2) {
+            width: 24px;
+            height: 77px;
+        }
+
+        /* Positions */
+        &:nth-child(1), &:nth-child(12) {
+            top: 31px;
+        }
+        &:nth-child(2), &:nth-child(8),
+        &:nth-child(11) {
+            top: 15px;
+        }
+        &:nth-child(3), &:nth-child(7) {
+            top: 23px;
+        }
+        &:nth-child(4), {
+            top: 8px;
+        }
+
+        /* Books Decoration*/
+        &:nth-child(2), &:nth-child(4),
+        &:nth-child(5), &:nth-child(6),
+        &:nth-child(8), &:nth-child(9),
+        &:nth-child(10), &:nth-child(11) {
+
+            &:before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 50%;
+                top: 22px;
+            }
+
+        }
+
+        /* Book 2 */
+        &:nth-child(2) {
+            &:before {
+                background-color: #fff;
+            }
+
+            /* Diamond Narrow "Joseph Silber" */
+            i {
+                display: block;
+                width: 0;
+                height: 0;
+                border: 7px solid transparent;
+                border-bottom: 15px solid #f3b502;
+                position: relative;
+                left: 5px;
+                top: 19px;
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    left: -7px;
+                    width: 0;
+                    height: 0;
+                    border: 7px solid transparent;
+                    border-top: 15px solid #f3b502;
+                }
+            }
+
+        }
+
+        /* Book 4 */
+        &:nth-child(4) {
+            &:before {
+                background-color: #fff;
+                height: 77%;
+                top: 10px;
+            }
+        }
+
+        /* Book 5 */
+        &:nth-child(5) {
+            &:before {
+                background-color: #86cccc;
+                height: 69%;
+                top: 16px;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                height: 7px;
+                width: 7px;
+                background-color: #fdfffc;
+                border-radius: 50%;
+                position: relative;
+                top: 20px;
+                left: 4px;
+            }
+        }
+
+        /* Book 6 */
+        &:nth-child(6) {
+            &:before {
+                background-image: linear-gradient(rgba(0, 0, 0, 0) 40%, #FFF 40%);
+                background-size: 16px 34px;
+                background-repeat: repeat-y;
+                height: 98%;
+                top: 2px;
+            }
+        }
+
+        /* Book 8 */
+        &:nth-child(8) {
+            &:before {
+                background-color: #86cccc;
+                height: 64%;
+                top: 15px;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 15px;
+                height: 31px;
+                background-color: #ec5b4a;
+                border-radius: 100%;
+                top: 24px;
+                left: 4px;
+            }
+        }
+
+        /* Book 9 */
+        &:nth-child(9) {
+            &:before {
+                background-color: #ec5a4b;
+                height: 65%;
+                top: 17px;
+            }
+
+            &:after {
+                content: '';
+                display: block;
+                position: relative;
+                background-color: #fff;
+                width: 3px;
+                height: 50%;
+                top: 22px;
+                left: 7px;
+            }
+
+        }
+
+        /* Book 10 */
+        &:nth-child(10) {
+            &:before {
+                background-color: #fff;
+            }
+
+            &:after {
+                width: 50%;
+                height: 35px;
+                content: '';
+                display: block;
+                position: relative;
+                top: 25px;
+                left: 8px;
+                background-image: linear-gradient(rgba(0, 0, 0, 0) 40%, #f5af01 40%);
+                background-size: 9px 7px;
+                background-repeat: repeat-y;
+            }
+        }
+
+        /* Book 11 */
+        &:nth-child(11) {
+            &:before {
+                background-color: #86cccc;
+            }
+        }
+
+    }
+}
+
+@media only screen and (max-height: 805px) {
+}

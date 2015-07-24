@@ -1,0 +1,64 @@
+/* =============================================== *
+ *                     Trash                       *
+ * =============================================== */
+
+.trash {
+    position: absolute;
+    bottom: 9px;
+    margin-left: 23px;
+    z-index: 2;
+    width: 71px;
+    height: 96px;
+    outline: 1px solid transparent; // Correct Jagged edges in Firefox
+    perspective: 150px;
+    transform: rotate(180deg);
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 75px;
+        height: 120px;
+        background: #fff;
+        transform: rotateX(45deg);
+        left: -1px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 113px;
+        height: 7px;
+        background: #353C44;
+        top: 122px;
+        left: -19px;
+        border-radius: 5px;
+    }
+
+    .shadows {
+        top: 21px;
+        width: 104px;
+        height: 3px;
+        left: -34px;
+    }
+}
+
+@media only screen and (max-height: 805px) {
+    .trash {
+        width: 62px;
+        bottom: 12px;
+
+        &:before {
+            width: 65px;
+            height: 100px;
+        }
+        &:after {
+            width: 92px;
+            height: 6px;
+            top: 97px;
+            left: -14px;
+        }
+        .shadow {
+            top: 17px;
+        }
+    }
+}

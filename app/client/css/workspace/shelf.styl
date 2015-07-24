@@ -1,0 +1,182 @@
+/* =============================================== *
+ *                     Shelf                       *
+ * =============================================== */
+    
+.shelf {
+    top: 30px;
+    right: 5%;
+    width: 272px;
+    float: right;
+    padding: 0 30px;
+    
+    &:after, &:before {
+        content: ''; 
+        position: absolute;
+        width: 100%;
+        height: 15px;
+        transform: skew(20deg);
+        background: #79a8c5;
+        bottom: -23px;
+        left: 2px; 
+    }
+
+    &:before {
+        bottom: -15px;
+        right: 2px; }
+
+    div {
+        height: 8px;
+        width: 100%;
+        position: absolute;
+        bottom: -8px;
+        background: #fff;
+        right: 1px;
+        
+        &:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 8px;
+            background: #79a8c5;
+            bottom: -15px;
+            right: -5px;
+        }
+    }
+
+    ul li {
+        float: left;
+    }
+}
+
+@media only screen and (max-height: 805px) {
+    .shelf {
+        width: 206px;
+
+        div:after {
+            right: -5px;
+        }
+
+        .ipad {
+            width: 47px;
+            height: 69px;
+            border: 7px solid #fff;
+
+            &:before {
+                bottom: -6px;
+                width: 4px;
+                height: 5px;
+            }
+        }
+
+        .books {
+            width: 134px;
+            top: 10px;
+
+            span:nth-child(1), span:nth-child(12),
+            span:nth-child(4), span:nth-child(6) {
+                width: 10px;
+                height: 43px;
+                top: 30px;
+            }
+            
+            span:nth-child(2) {
+                width: 17px;
+                height: 65px;
+                top: 7px;
+            }
+            
+            span:nth-child(2):before,
+            span:nth-child(4):before,
+            span:nth-child(5):before,
+            span:nth-child(6):before,
+            span:nth-child(8):before,
+            span:nth-child(9):before,
+            span:nth-child(10):before, span:nth-child(11):before {
+                top: 17px;
+            }
+            
+            span:nth-child(2) i {
+                border: 5px solid rgba(0, 0, 0, 0);
+                border-bottom: 13px solid #F3B502;
+                left: 4px;
+                top: 16px;
+
+                &:after {
+                    left: -5px;
+                    top: 13px;
+                    border: 5px solid rgba(0, 0, 0, 0);
+                    border-top: 13px solid #F3B502;
+                }
+            }
+            
+            span:nth-child(3), span:nth-child(7),
+            span:nth-child(9) {
+                width: 5px;
+                height: 49px;
+            }
+            
+            span:nth-child(4) {
+                width: 6px;
+                height: 59px;
+                top: 13px;
+                &:before {
+                    top: 7px !important;
+                }
+            }
+            
+            span:nth-child(9), span:nth-child(6),
+            span:nth-child(5), span:nth-child(10) {
+                width: 11px;
+                height: 65px;
+                top: 8px;
+            }
+            
+            span:nth-child(5) {
+                &:before {
+                    top: 10px !important;
+                }
+                &:after {
+                    width: 5px;
+                    height: 5px;
+                    top: 13px;
+                    left: 3px;
+                }
+            }
+            
+            span:nth-child(6):before {
+                background-size: 16px 18px;
+                height: 84%;
+                top: 2px !important;
+            }
+            
+            span:nth-child(8), span:nth-child(11) {
+                width: 17px;
+                height: 54px;
+                top: 18px;
+                
+                &:before {
+                    top: 10px;
+                }
+                
+                &:after {
+                    top: 15px;
+                    left: 4px;
+                    width: 10px;
+                    height: 24px;
+                }
+            }
+            
+            span:nth-child(9):after {
+                left: 4px;
+            }
+            
+            span:nth-child(10):after {
+                top: 15px;
+            }
+            
+            span:nth-child(11):before {
+                height: 35px;
+            }
+        }
+    }
+}

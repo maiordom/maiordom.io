@@ -1,0 +1,178 @@
+/* =============================================== *
+ *                      Chair                      *
+ * =============================================== */
+    
+.chair {
+    position: absolute;
+    width: 165px;
+    height: 436px;
+    bottom: 34px;
+    z-index: 2;
+    margin-left: 575px;
+    transition-property: margin-left;
+    transition-duration: 1s;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 165px;
+        height: 231px;
+        background: #3a3a3a;
+        border-radius: 10px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        background: #7d7d7d;
+        width: 12px;
+        height: 10px;
+        left: 76px;
+        top: 231px;
+    }
+
+    ul {
+        position: absolute;
+        width: 165px;
+        height: 23px;
+        background: #3a3a3a;
+        top: 240px;
+        border-radius: 0 0 15px 15px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: #656565;
+            width: 141px;
+            height: 11px;
+            top: 23px;
+            left: 10px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            background: #4b4b4b;
+            width: 37px;
+            height: 7px;
+            top: 34px;
+            left: 62px;
+        }
+
+        li:first-child {
+            width: 18px;
+            height: 156px;
+            position: absolute;
+            left: 75px;
+            top: 41px;
+            perspective: 99px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 16px;
+                width: 14px;
+                height: 167px;
+                background: #4b4b4b;
+                transform: rotateX(160deg);
+                outline: 1px solid transparent; // Correct Jagged edges in Firefox
+            }
+
+        }
+
+        li:nth-child(2), li:nth-child(3) {
+            position: absolute;
+            width: 11px;
+            height: 96px;
+            top: 121px;
+            perspective: 99px;
+            transform: rotate(228deg);
+            left: 33px;
+
+            &:after {
+                content: '';
+                background: #4b4b4b;
+                position: absolute;
+                top: -24px;
+                width: 11px;
+                height: 123px;
+                transform: rotateX(45deg);
+                outline: 1px solid transparent; // Correct Jagged edges in Firefox
+            }
+        }
+
+        li:nth-child(3) {
+            left: 120px;
+            transform: rotate(131deg);
+        }
+
+    }
+}
+
+@media only screen and (max-height: 805px) {
+    .chair {
+        margin-left: 432px;
+        width: 119px;
+        height: 310px;
+
+        &:after {
+            height: 165px;
+            width: 119px;
+        }
+
+        &:before {
+            width: 8px;
+            height: 7px;
+            top: 165px;
+            left: 60px;
+        }
+
+        ul {
+            width: 119px;
+            height: 15px;
+            top: 172px;
+
+            &:before {
+                width: 98px;
+                height: 8px;
+                top: 15px;
+            }
+
+            &:after {
+                width: 25px;
+                height: 4px;
+                top: 23px;
+                left: 51px;
+            }
+
+            li {
+                &:first-child {
+                    left: 60px;
+                    top: 31px;
+                    &:after {
+                        top: 7px;
+                        width: 10px;
+                        height: 108px;
+                    }
+                }
+
+                &:nth-child(2), &:nth-child(3) {
+                    top: 62px;
+
+                    &:after {
+                        width: 6px;
+                        height: 109px;
+                    }
+                }
+
+                &:nth-child(3) {
+                    left: 83px;
+                    top: 67px;
+                    height: 93px;
+                }
+
+            }
+
+        }
+    }
+}

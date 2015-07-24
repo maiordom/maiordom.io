@@ -1,0 +1,56 @@
+/* =============================================== *
+ *                    Iphone                       *
+ * =============================================== */
+
+.iphone {
+    position: absolute;
+    top: -64px;
+    right: 30px;
+    width: 37px;
+    height: 64px;
+    background: #ededed;
+    border-radius: 3px;
+
+    &:before {
+        position: absolute;
+        content: '';
+        width: 29px;
+        height: 48px;
+        background: #2c2c2c;
+        top: 5px;
+        left: 4px;
+    }
+
+    &:after {
+        position: absolute;
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #2c2c2c;
+        top: 56px;
+        left: 16px;
+    }
+}
+
+@media only screen and (max-height: 805px) {
+    .iphone {
+        position: absolute;
+        top: -50px;
+        right: 30px;
+        width: 31px;
+        height: 50px;
+
+        &:before {
+            width: 23px;
+            height: 35px;
+            top: 5px;
+            left: 4px;
+        }
+
+        &:after {
+            top: 43px;
+            left: 13px;
+        }
+    }
+}

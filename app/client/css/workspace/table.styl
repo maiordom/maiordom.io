@@ -1,0 +1,125 @@
+/* =============================================== *
+ *                      Table                      *
+ * =============================================== */
+    
+
+.table {
+    position: absolute;
+    bottom: 33px;
+    z-index: 1;
+    width: 898px;
+    height: 297px;
+    margin-left: 92px;
+    transition-property: margin-left;
+    transition-duration: 1s;
+
+    &:after {
+        position: absolute;
+        content: '';
+        background: #ccbdac;
+        box-shadow: 0 1px 7px 0 #958A7E;
+        height: 21px;
+        width: 100%;
+    }
+    
+    &:before {
+        position: absolute;
+        content: '';
+        background: #e0ceb8;
+        height: 100%;
+        width: 31px;
+    }
+
+    .right-tb {
+        position: absolute;
+        right: 0;
+        width: 233px;
+        height: 274px;
+        padding: 23px 0 0 20px;
+        background: #e0ceb8;
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 5px;
+            position: absolute;
+            bottom: -4px;
+            background: #CA98AB;
+            border-radius: 100%;
+            right: 1px;
+        }
+
+        span {
+            position: relative;
+            padding: 2px;
+            border: 2px solid #BBAA95;
+            width: 205px;
+            height: 70px;
+            margin-top: 10px;
+            display: block;
+
+            &:before {
+                content: '';
+                background: #CEBCA7;
+                position: absolute;
+                width: 205px;
+                height: 70px;
+            }
+
+            &:after {
+                content: '';
+                background: #fff;
+                position: absolute;
+                width: 69px;
+                height: 15px;
+                left: 73px;
+                top: 18px;
+                border-radius: 15px 15px 0 0;
+                border-bottom: 2px solid #9b8b77;
+            }
+
+        }
+    }
+}
+
+@media only screen and (max-height: 805px) {
+    .table {
+        width: 639px;
+        height: 211px;
+        margin-left: 81px;
+
+        .right-tb {
+            width: 165px;
+            height: 191px;
+            padding: 20px 0 0 13px;
+
+            span {
+                width: 144px;
+                height: 46px;
+                margin-top: 8px;
+
+                &:before {
+                    width: 144px;
+                    height: 46px;
+                }
+
+                &:after {
+                    left: 51px;
+                    top: 14px;
+                    width: 47px;
+                    height: 10px;
+                }
+
+            }
+
+        }
+
+        &:before {
+            width: 24px;
+        }
+
+        &:after {
+            height: 15px;
+        }
+    }
+}

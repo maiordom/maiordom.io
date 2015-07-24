@@ -1,0 +1,130 @@
+/* =============================================== *
+ *                     Router                      *
+ * =============================================== */
+ 
+.router {
+    background: #424242;
+    position: absolute;
+    width: 84px;
+    height: 20px;
+    top: -22px;
+    left: 20px;
+
+    &:before, &:after {
+        background: #424242;
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 2px;
+        top: 20px;
+        right: 5px;
+    }
+
+    &:after {
+        right: inherit;
+        left: 5px;
+    }
+
+    ul {
+        content: '';
+        position: absolute;
+        width: 4px;
+        height: 31px;
+        top: -35px;
+        perspective: 19px;
+        left: 6px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            background: #424242;
+            transform: rotateX(45deg);
+            width: 100%;
+            height: 100%;
+            outline: 1px solid transparent; // Correct Jagged edges in Firefox
+        }
+
+        &:after {
+            content: '';
+            background: #424242;
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            left: -2px;
+            top: 2px;
+        }
+
+        li {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #fff;
+            top: 43px;
+
+            &:first-child {
+                border-radius: 50%;
+
+                &:after, &:before, i {
+                    content: '';
+                    position: absolute;
+                    width: 4px;
+                    height: 4px;
+                    background: #fff;
+                    left: 6px;
+                    border-radius: 50%;
+                }
+
+                &:before {
+                    left: 12px;
+                }
+
+                i {
+                    left: 18px;
+                }
+            }
+
+            &:nth-child(2) {
+                width: 8px;
+                height: 8px;
+                left: 65px;
+                top: 41px;
+            }
+
+        }
+
+    }
+}
+
+@media only screen and (max-height: 805px) {
+    .router {
+        width: 61px;
+        height: 14px;
+        top: -17px;
+
+        &:before, &:after {
+            top: 14px;
+            width: 12px;
+        }
+
+        ul {
+            li:first-child {
+                width: 3px;
+                height: 3px;
+                top: 41px;
+
+                &:after, &:before, i {
+                    width: 3px;
+                    height: 3px;
+                }
+            }
+
+            li:nth-child(2) {
+                width: 5px;
+                height: 5px;
+                left: 45px;
+                top: 39px;
+            }
+        }
+    }
+}

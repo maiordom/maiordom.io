@@ -1,0 +1,101 @@
+/* =============================================== *
+ *                       Cup                       *
+ * =============================================== */
+
+.cup {
+    position: absolute;
+    z-index: 1;
+    background: #eb9673;
+    width: 42px;
+    height: 55px;
+    top: -55px;
+    left: 195px;
+    border-radius: 0 0 3px 3px;
+
+    &:after {
+        content: '';
+        position: absolute;
+        background: #c68060;
+        width: 100%;
+        height: 5px;
+        bottom: 0;
+        border-radius: 0 0 3px 3px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 13px;
+        height: 29px;
+        top: 8px;
+        left: -18px;
+        border-radius: 20px 0 0 20px;
+        border: 5px solid #eb9673;
+        border-right: none;
+    }
+
+    i {
+        position: absolute;
+        width: 2px;
+        height: 17px;
+        background: #fff;
+        left: 22px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 13px;
+            background: #444;
+            top: 17px;
+            left: -5px;
+            border-radius: 4px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            background: #dbd13a;
+            width: 12px;
+            height: 4px;
+            top: 20px;
+            left: -5px;
+        }
+    }
+}
+
+@media only screen and (max-height: 805px) {
+    .cup {
+        top: -39px;
+        left: 149px;
+        width: 30px;
+        height: 39px;
+
+        i {
+            height: 12px;
+            left: 13px;
+
+            &:before {
+                width: 10px;
+                height: 9px;
+                top: 13px;
+                left: -4px;
+            }
+
+            &:after {
+                width: 10px;
+                height: 2px;
+                top: 15px;
+                left: -4px;
+            }
+        }
+
+        &:before {
+            width: 9px;
+            height: 18px;
+            top: 6px;
+            left: -13px;
+            border: 4px solid #eb9673;
+        }
+    }
+}

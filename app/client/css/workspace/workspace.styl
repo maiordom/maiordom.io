@@ -1,0 +1,33 @@
+/* =============================================== *
+ *                   Workspace                     *
+ * =============================================== */    
+
+.workspace {
+    div {
+        position: absolute;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        bottom: 0;
+        background: #e2aabe;
+        height: 68px;
+        border-top: 9px solid #ae758a;
+    }
+
+    .desk {
+        width: 990px;
+        height: 100%;
+        margin: auto;
+        position: inherit;
+    }
+}
+
+@media only screen and (max-height: 805px) {
+    .workspace .desk {
+        width: 724px;
+    }
+}

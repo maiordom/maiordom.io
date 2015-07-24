@@ -1,0 +1,78 @@
+/* =============================================== *
+ *                 Black-screen                    *
+ * =============================================== */
+
+.bk-screen {
+    position: absolute;
+    width: 180px;
+    height: 241px;
+    background: #343441;
+    border: 8px solid #525151;
+    right: 45px;
+    top: -296px;
+    background: url(http://i39.tinypic.com/2w5oktu.jpg);
+    background-size: 100%;
+    animation: slide 15s linear infinite;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background: #343434;
+        width: 78px;
+        height: 17px;
+        bottom: -25px;
+        left: 51px;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 76px;
+        height: 0;
+        bottom: -38px;
+        right: 38px;
+        border-bottom: 14px solid #626262;
+        border-left: 13px solid rgba(0, 0, 0, 0);
+        border-right: 14px solid rgba(0, 0, 0, 0);
+    }
+
+    i {
+        position: absolute;
+        background: #343434;
+        width: 103px;
+        height: 9px;
+        bottom: -47px;
+        left: 39px;
+    }
+}
+
+@media only screen and (max-height: 805px) {
+    .bk-screen {
+        width: 126px;
+        height: 168px;
+        right: 36px;
+        top: -209px;
+        border: 6px solid #525151;
+
+        &:before {
+            width: 54px;
+            height: 11px;
+            bottom: -17px;
+            left: 39px;
+        }
+
+        &:after {
+            width: 54px;
+            bottom: -28px;
+            right: 19px;
+            border-bottom: 11px solid #626262;
+        }
+
+        i {
+            width: 80px;
+            height: 7px;
+            bottom: -35px;
+            left: 27px;
+        }
+    }
+}

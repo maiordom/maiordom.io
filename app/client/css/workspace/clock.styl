@@ -1,0 +1,151 @@
+/* =============================================== *
+ *                     Clock                       *
+ * =============================================== */
+ 
+.clock {
+    position: relative;
+    height: 123px;
+    width: 123px;
+    background: white;
+    box-sizing: border-box;
+    border-radius: 100%;
+    border: 6px solid #5685A1;
+    position: absolute;
+    top: 30px;
+    left: 5%;
+    margin: auto;
+    
+    .top {
+        position: absolute;
+        width: 3px;
+        height: 8px;
+        background: #262626;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    
+    .right {
+        position: absolute;
+        width: 8px;
+        height: 3px;
+        background: #262626;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto 0;
+    }
+    
+    .bottom {
+        position: absolute;
+        width: 3px;
+        height: 8px;
+        background: #262626;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+    }
+    
+    .left {
+        position: absolute;
+        width: 8px;
+        height: 3px;
+        background: #262626;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto 0;
+    }
+    
+    .center {
+        height: 6px;
+        width: 6px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #262626;
+        border-radius: 100%;
+    }
+    
+    .hour {
+        width: 3px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        animation: time 86400s infinite linear;
+
+        &:before {
+            position: absolute;
+            content: '';
+            background: #262626;
+            height: 60px;
+            width: 3px;
+            top: 30px;
+        }
+    }
+    .minute {
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        animation: time 3600s infinite linear;
+
+        &:before {
+            position: absolute;
+            content: '';
+            background: #262626;
+            height: 40px;
+            width: 1px;
+            top: 50px;
+        }
+    }
+    
+    .second {
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        animation: time 60s infinite linear;
+
+        &:before {
+            position: absolute;
+            content: '';
+            background: #fd1111;
+            height: 45px;
+            width: 2px;
+            top: 45px;
+        }
+    }
+}
+
+@media only screen and (max-height: 805px) {
+    .clock {
+        width: 100px;
+        height: 100px;
+
+        .hour:before {
+            height: 34px;
+            top: 41px;
+        }
+
+        .minute:before {
+            height: 31px;
+            top: 46px;
+        }
+
+        .second:before {
+            height: 33px;
+            top: 45px;
+        }
+    }
+}
